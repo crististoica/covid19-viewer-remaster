@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import { ThemeProvider } from "@material-ui/core/styles";
+import { createMuiTheme, Typography, Paper } from "@material-ui/core";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+const App = () => {
+  const darkModePreference = localStorage.getItem("darkMode");
+  const [darkMode, setDarkMode] = useState(
+    darkModePreference ? darkModePreference === "true" : false
   );
-}
+
+  const theme = createMuiTheme({
+    palette: {
+      type: darkMode ? "dark" : "light",
+      primary: {
+        light: "#757ce8",
+        main: "#448aff",
+        dark: "#5B6057",
+        contrastText: "#ffffff",
+      },
+      secondary: {
+        light: "#ff7961",
+        main: "#3DA35D",
+        contrastText: "#ffffff",
+      },
+      grey: {
+        800: "#ff4242",
+      },
+      contrastThreshold: 3,
+      tonalOffset: 0.2,
+    },
+  });
+
+  return (
+    <ThemeProvider theme={theme}>
+      <Paper className="main" square>
+        <Typography>Hello World</Typography>
+      </Paper>
+    </ThemeProvider>
+  );
+};
 
 export default App;
