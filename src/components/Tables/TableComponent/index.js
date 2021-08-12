@@ -47,7 +47,7 @@ const TableComponent = ({
     : [];
 
   return (
-    <Grid item lg={4} md={6} sm={12}>
+    <Grid item md={6} sm={12}>
       <Grid item container xs={12} justify="center" style={{ color: color }}>
         <Typography variant="h6" className={classes.tableTitle}>
           {title}

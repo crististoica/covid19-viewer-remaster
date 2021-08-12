@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
   },
   ellipseContainer: {
     textAlign: "left",
-    width: 150,
+    width: 250,
     overflow: "hidden",
     textOverflow: "ellipse",
     [theme.breakpoints.down("md")]: {

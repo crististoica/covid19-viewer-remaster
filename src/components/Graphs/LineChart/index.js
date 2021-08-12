@@ -26,7 +26,7 @@ const LineChart = ({ dataKey, eqFunc, world }) => {
 
   const [tempDates, setTempDates] = useState([...allDates.slice(length - 14)]);
 
-  const { newConfirmed, newRecovered, newDeaths } = formatChartData(
+  const { newConfirmed, newDeaths } = formatChartData(
     currentData.covid19Data,
     tempDates
   );
@@ -46,13 +46,6 @@ const LineChart = ({ dataKey, eqFunc, world }) => {
             radius: 1,
           },
         },
-      },
-      {
-        label: "New Recovered Cases",
-        data: newRecovered,
-        fill: true,
-        backgroundColor: fade(theme.palette.neutral.totalRecovered, fadeValue),
-        pointHitRadius: 10,
       },
       {
         label: "New Deceased Cases",

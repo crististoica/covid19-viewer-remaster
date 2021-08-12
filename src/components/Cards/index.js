@@ -32,15 +32,9 @@ const Cards = () => {
         totalConfirmedCases={
           currentCountry.covid19Data[currentCountryDate].confirmed
         }
-        totalRecoveredCases={
-          currentCountry.covid19Data[currentCountryDate].recovered
-        }
         totalDeathsCases={currentCountry.covid19Data[currentCountryDate].deaths}
         newConfirmedCases={
           currentCountry.covid19Data[currentCountryDate].newConfirmed
-        }
-        newRecoveredCases={
-          currentCountry.covid19Data[currentCountryDate].newRecovered
         }
         newDeathsCases={
           currentCountry.covid19Data[currentCountryDate].newDeaths
@@ -54,10 +48,8 @@ const Cards = () => {
         pop={worldData.population}
         date={worldData.covid19Data[currentWorldDate].date}
         totalConfirmedCases={worldData.covid19Data[currentWorldDate].confirmed}
-        totalRecoveredCases={worldData.covid19Data[currentWorldDate].recovered}
         totalDeathsCases={worldData.covid19Data[currentWorldDate].deaths}
         newConfirmedCases={worldData.covid19Data[currentWorldDate].newConfirmed}
-        newRecoveredCases={worldData.covid19Data[currentWorldDate].newRecovered}
         newDeathsCases={worldData.covid19Data[currentWorldDate].newDeaths}
         dispatchDateAction={setCurrentWorldDate}
       />

@@ -43,14 +43,6 @@ const Tables = () => {
       />
       <TableComponent
         classes={classes}
-        colName="New Recovered"
-        compareKey="newRecovered"
-        color={theme.palette.neutral.totalRecovered}
-        title="Recovered Cases"
-        date={tableDate}
-      />
-      <TableComponent
-        classes={classes}
         colName="New Deceased"
         compareKey="newDeaths"
         color={theme.palette.neutral.totalDeaths}

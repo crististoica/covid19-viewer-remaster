@@ -10,7 +10,6 @@ import {
 
 import { IoIosPeople } from "react-icons/io";
 import { MdTurnedIn } from "react-icons/md";
-import { GiHospitalCross } from "react-icons/gi";
 import { RiSkull2Fill } from "react-icons/ri";
 
 import Info from "./Info";
@@ -29,10 +28,8 @@ const InfoCard = ({
   pop,
   date,
   totalConfirmedCases,
-  totalRecoveredCases,
   totalDeathsCases,
   newConfirmedCases,
-  newRecoveredCases,
   newDeathsCases,
   dispatchDateAction,
 }) => {
@@ -67,12 +64,6 @@ const InfoCard = ({
                 cssClass="totalConfirmed"
               />
               <Info
-                text={totalRecoveredCases}
-                icon={GiHospitalCross}
-                title="Total Recovered Cases"
-                cssClass="totalRecovered"
-              />
-              <Info
                 text={totalDeathsCases}
                 icon={RiSkull2Fill}
                 title="Total Deceased Cases"
@@ -87,12 +78,6 @@ const InfoCard = ({
                 icon={MdTurnedIn}
                 title="New Confirmed Cases"
                 cssClass="totalConfirmed"
-              />
-              <Info
-                text={newRecoveredCases}
-                icon={GiHospitalCross}
-                title="New Recovered Cases"
-                cssClass="totalRecovered"
               />
               <Info
                 text={newDeathsCases}
